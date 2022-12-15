@@ -16,7 +16,6 @@
         #nav{
             justify-content: space-around;
             display: flex;
-            /* border: 1px solid red; */
             height: 110px;
             position: sticky;
         }
@@ -26,13 +25,13 @@
         }
 
         .searchbar{
-            width: 450px;
+            width: 470px;
             padding: 27px 50px;
             display: flex;
         }
 
         .searchbar>a{
-            margin-top: 15px;
+            margin-top: 13px;
             color: black;
             height: 30px;
         }
@@ -43,9 +42,10 @@
         }
 
        #nav>div>h3{
-            margin-top: 28px;
-            font-weight: 500;
-            
+            margin-top: 32px;
+            font-weight: 400;
+            font-size: 20px;
+            cursor: pointer;
         }
 
         #nav>div>h1{
@@ -54,8 +54,8 @@
         }
 
         #nav>div>h4{
-            font-size: 11px;
-            
+            font-size: 13px;
+            margin-top: -8px;
         }
         #nav>div>h4>span{
             font-weight: bold;
@@ -76,7 +76,7 @@
            height: 150px;
            width: 95%;
            margin: auto;
-          
+          margin-top: 50px;
        }
     
        #foot>div{
@@ -195,6 +195,146 @@
         width: 80px;
        }
     /* footer end */
+
+    /* homepage start here */
+    #first{
+        height: 80px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        font-size: 5px;
+        text-align: center;
+        margin-top: 15px;
+        padding: 8px 0px;
+    }
+    #first:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    }
+    
+    #carouselExampleControls{
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    
+    div>h1{
+        text-align: center;
+        font-size: 33px;
+        margin-top: 20px;
+    }
+    .circle{
+        height: auto;
+        display: flex;
+        width: 95%;
+        margin: auto;
+        cursor: pointer;
+    }
+    .circle>div{
+        margin-top: 23px;
+        width: auto;
+    }
+    .circle>div>img{
+        width: 100%;
+    }
+
+    .small{
+        margin: auto;
+        height: auto;
+        width: 500px;
+        background-color: #ebebeb;
+        margin-top: 22px;
+        cursor: pointer;
+    }
+    .small>div{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .small>div>p{
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    .bigCircle{
+        width: 95%;
+        margin: auto;
+        display: flex;
+        height: auto;
+        gap: 22px;
+        cursor: pointer;
+    }
+    .bigCircle>div>a>img{
+        width: 100%;
+    }
+    .bigCircle>div{
+        margin-top: 15px;
+    }
+    .bigCircle>div>h5{
+        text-align: center;
+        font-weight: 400;
+        margin-top: 10px;
+        
+    }
+    .bigCircle>div>p{
+        text-align: center;
+        font-size: 12px;
+    }
+    .bigCircle>div>button{
+        margin: auto;
+        display: block;
+        padding: 8px 8px;
+        
+    }
+    .bigCircle>div>button:hover{
+        cursor: pointer;
+        background-color: rgb(137, 199, 199);
+    }
+    .box{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        width: 95%;
+        margin: auto;
+        height: 200px;
+        margin-top: 70px;
+        gap: 15px;
+    }
+    .box>div img{
+        width: 100%;
+    }
+    
+    .x{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 20px;
+        width: 95%;
+        margin: auto;
+        gap: 20px;
+    }
+    .x>div>img{
+        width: 100%;
+    }
+    .y{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+    }
+    .y>p{
+        margin-left: 100px;
+        margin-top: 10px;
+        color: white;
+    }
+    
+    .y:hover{
+        cursor: pointer;
+        background-color: #28bdb7;
+        color: black;
+    }
+    .banner2>img{
+       width: 100%;
+       margin-top: 25px;
+       cursor: pointer;
+    }
+    
     </style>
 </head>
 <body>
@@ -219,6 +359,195 @@
 <!-- header end -->
 
 <hr>
+
+<!-- dropdoun start here -->
+<!-- <div id="drop">
+    <ul>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">Holiday Gifts</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Skin Care</a></li>
+        <li><a href="#">hair</a></li>
+        <ul class="dropdown">
+          <li></li>
+        </ul>
+    </ul>
+</div> -->
+
+
+<!-- homepage start here -->
+<div id="first">
+    <h2>25% off with code REPLAY + free PCA SKIN Rejuvenate and Hydrate Duo (worth $33.50) @ $130+ | SHOP NOW ></h2>
+  </div>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/46/1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-1180x450.jpeg-050446.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/10/original-New_Project_%283%29-085610.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/55/Shot6-1180x450-095455.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </body>
+</html>
+
+
+<div>
+    <h1>Shop by Category</h1>
+</div>
+
+<div class="circle">
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/06/round_widget_ss_homepage_-_Untitled_Page_%281%29-062906.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/26/round_widget_ss_homepage_-_Untitled_Page_%282%29-062926.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/round_widget_ss_homepage_-_Untitled_Page_%283%29-063011.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/07/round_widget_ss_homepage_-_Untitled_Page_%286%29-063207.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/32/round_widget_ss_homepage_-_Untitled_Page_%285%29-063132.png" alt="">
+    </div>
+</div>
+
+<div>
+    <h1>Missed Black Friday?</h1>
+</div>
+
+<div class="small">
+   <div>
+    <p>25% off Black Friday Replay</p>
+    <p>Bioeffect</p>
+    <p>Christophe Robin</p>
+   </div>
+</div>
+
+<div>
+    <h1>Trending Offers</h1>
+</div>
+
+<div class="bigCircle">
+    <div>
+       <a href="index.html"> <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/53/original-500x500-041753.jpeg" alt=""></a>
+        <h5>SkinCeutical Gift</h5>
+        <p>Recieve a SkinCeutical Reveratrol BE 4ml (Worth $21) when you spend $220 or more on the brand</p>
+        <button>SHOP NOW</button>
+    </div>
+    <div>
+        <a href="#"><img src="https://static.thcdn.com/images/small/webp/widgets/121-us/05/original-500x500-041805.jpeg" alt=""></a>
+        <h5>20% off SKINMedia + $135 gift</h5>
+        <p>Receive a FREE SkinMediaKit (Worth $135) when you spend $250 or more on the brand</p>
+        <button>SHOP NOW</button>
+    </div>
+    <div>
+       <a href="#"> <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/14/original-500x500-060614.jpg" alt=""></a>
+        <h5>25% off 111SKIN with code REPLAY + $95 gift</h5>
+        <p>Plus, receive a 111SKIN SKIN Space Defence Bright Eye Lift Gel Mini <br> 7.5 (Worth $95) when you spend $220 or more on the brand</p>
+        <button>SHOP NOW</button>
+    </div>
+</div>
+
+<div class="box">
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/26/180x72_4_233548301_CA_SS_Logo_Amend_BAU_THG0030424-041301-124116-063126.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/18/original-logo-1024x383-035229-063318.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/Revision_Skincare_Logo_without_Tag_Line-052511.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/46/original-NF_Skinstore_Banner_Logo_Color_320x140-01-011402-010546.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/27/220322-ELTAMD-LOGO-RGB-01-065127.png" alt="">
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/07/original-LOGO-2022_SkinStore_Landing_Page-BLACK-060107.png" alt="">
+    </div>
+</div>
+
+<div>
+    <h1>What People Are Buying Right Now</h1>
+</div>
+
+<div class="x">
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/11289609-1174892770940184.jpg" alt="">
+        <p>SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml</p>
+        <p>$169.00</p>
+        <div class="y">
+            <p>SHOP NOW</p>
+        </div>
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/13973771-1764998807002190.jpg" alt="">
+        <p>Eve Lom Decadent Double Cleanse Ritual Holiday Set 2022 (Worth$235.00</p>
+        <p>$155.00</p>
+        <div class="y">
+            <p>SHOP NOW</p>
+        </div>
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/12434373-1744821040696653.jpg" alt="">
+        <p>BIOEFFECTEGF Eye Serum 6ml Ritual Page Found</p>
+        <p>$95.00</p>
+        <div class="y">
+            <p>SHOP NOW</p>
+        </div>
+    </div>
+    <div>
+        <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/12588477-1794776910642146.jpg" alt="">
+        <p>111SKIN Y Theorem Bio Cellulose Facial Mask Single 0.87 oz (Worth$32.00)</p>
+        <p>$10.00</p>
+        <div class="y">
+            <p>SHOP NOW</p>
+        </div>
+    </div>
+</div>
+
+<div class="banner2">
+    <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/33/Skinstore_August_Referral_-_Untitled_Page_%281%29-022033.png" alt="">
+</div>
+
+<div class="banner2">
+    <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/32/original-0308-STDCRE32346-SS-AH-SkinStore-Concierge-Banners-1180x200-084632.jpg" alt="">
+</div>
+
+
+
 
 <!-- footer start here -->
 <hr>
