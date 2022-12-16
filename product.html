@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoductPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #navbar{
+            justify-content: space-around;
+            display: flex;
+            height: 110px;
+            width: 100%;
+            /* position: fixed; */
+         }
+
+        #navbar>div{
+            margin-top: 10px;
+        }
+
+        .searchbar{
+            width: 470px;
+            padding: 27px 50px;
+            display: flex;
+        }
+
+        .searchbar>a{
+            margin-top: 13px;
+            color: black;
+            height: 30px;
+        }
+
+        input{
+            width: 420px; 
+            padding: 12px;
+        }
+
+        #navbar>div>h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        #navbar>div>h4{
+            font-size: 13px;
+            margin-top: -8px;
+        }
+        #navbar>div>h4>span{
+            font-weight: bold;
+        }
+
+        #navbar>div>h3:first-child(1){
+            margin-left: 80px;
+        }
+
+        .A>div{
+        color: black;
+        margin-top: 30PX;
+        
+    }
+    .A>div>a{
+        color: black;
+        text-decoration: none;
+    }
+    .C>div{
+        color: black;
+        margin-top: 30PX;
+        
+    }
+    .C>div>a{
+        color: black;
+        text-decoration: none;
+    }
+
+    #small{
+        height: 75px;
+        gap: 12px;
+        background-color: rgb(231, 236, 239);
+        margin-top: 30px;
+    }
+    #small>div{
+        display: flex;
+        gap: 33px;
+    }
+    #small>div>p{
+        font-size: 17px;
+        margin: auto;
+        margin-top: 25px;
+    }
+    #first{
+        height: 80px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        font-size: 17px;
+        text-align: center;
+        margin-top: 20px;
+        padding: 12px 0px;
+    }
+    #first:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    }
+
+    .p{
+        margin-top: 30px;
+        margin-left: 30px;
+        font-size: 17px;
+    }
+
+    #container{
+        border: 1px solid red;
+        height: 1200px;
+        width: 95%;
+        margin: auto;
+        display: flex;
+        margin-top: 50px;
+        gap: 25px;
+    }
+    #container>div{
+        border: 1px solid green;
+        height: 1200px;
+        width: 100%;
+    }
+    #container>div:nth-child(1){
+        width: 40%;
+    }
+    #container>div>h1{
+        font-size: 45px;
+    }
+    #container>div>p{
+        margin-top: 15px;
+    }
+    span{
+        text-decoration: underline;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <!-- header start here -->
+
+    <nav>
+    <div id="navbar">
+        <div>
+            <h1>SkinStore</h1>
+            <h4>part of the <span>LOOKFANSTASTIC</span> group</h4>
+        </div>
+        <div class="searchbar">
+            <input type="search" placeholder="Search for a product or brand....">
+            <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+        <div class="A">
+            <div><a href="login.html"><h3>Account</h3></a></div>
+        </div>
+        <div class="C">
+            <div><a href="cart.html"><h3>Cart</h3></a></div>
+        </div>
+    </div>
+  </nav>
+
+  <hr>
+
+  <div id="small">
+    <div>
+        <p>FREE US Shipping Over $49</p>
+        <p>Refer a Friend, Get $15</p>
+        <p> New Customers Save 20% - Use Code NEWBIE</p>
+        <p> Download Our App</p>
+    </div>
+</div>
+
+<div id="first">
+    <h2>Up to 30% off with code COUNTDOWN + free The Ritual of Happy Buddha USA Fragrance Sticks(worth$35)@$130+ | SHOP NOW ></h2>
+  </div>
+<!-- </div> -->
+<!-- header end -->
+
+<p class="p">Home / Brands / SkinCeuticals / Shop SkinCeuticals Skincare</p>
+
+<div id="container">
+    <div></div>
+    
+    <div>
+        <h1>Shop SkinCeuticals Skincare</h1>
+        <p>72 results</p>
+        <p>The SkinCeuticals story began with Dr. Sheldon Pinnell’s groundbreaking research on vitamin C in 1992, long before the company was established in 1997. In the years since, SkinCeuticals has remained committed to using evidence-based research to develop new antioxidant and cosmeceutical formulations, and has grown to become the #1 Medical Skincare Brand in the U.S."[1]...............................</p>
+        <span>Read more</span>
+    </div>
+</div>
+</body>
+</html>
