@@ -39,12 +39,19 @@
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             margin: auto;
             width: 55%;
-            height: 1040px;
+            height: 750px;
             margin-top: 140px;
             padding: 25px 30px;
          }
-         .container>div>h2{
-            margin-top: 15px;
+         .container>div>form>h2{
+            margin-top: 20px;
+         }
+         .h{
+            margin-top: 50px;
+            font-size: 25px;
+         }
+         .first{
+            font-size: 32px;
          }
          .box{
             height: 45px;
@@ -70,35 +77,40 @@
             background-color: black;
             margin-top: 20px;
          }
-         .container>div>h5{
+         .container>div>form>h5{
             font-size: 17px;
             margin-top: 30px;
          }
-         .container>div>input{
+         .container>div>form>input{
             width: 100%;
             height: 50px;
          }
-         .container>div>button{
+
+         #sub{
+            height: 50px;
             width: 100%;
-            height: 48px;
-            margin-top: 27px;
+            font-size: 20px;
+            margin-top: 35px;
+            cursor: pointer;
             background-color: black;
             color: white;
-            font-size: 20px;
          }
-         .container>div>button:hover{
+
+         #sub:hover{
             cursor: pointer;
             background-color: #28bdb7;
             color: black;
             border: 0px;
+            text-decoration: underline;
          }
+
          .container>div>p{
             margin-top: 10px;
          }
-         .container>div>.last{
+         .container>div>form>.last{
             margin-top: 40px;
          }
-         .container>div>.first{
+         .container>div>form>.first{
             font-size: 30px;
          }
     </style>
@@ -116,7 +128,7 @@
     <div class="container">
         <div>
             <h2 class="first">About You</h2>
-            <h2>Sign Up With</h2>
+            <h2 class="h">Sign Up With</h2>
 
             <div class="box">
                 <div>
@@ -127,26 +139,35 @@
                 </div>
             </div>
 
-            <hr>
-
-            <h2>Or create an email account</h2>
-            <h5>Full Name</h5>
-            <input type="text">
-            <h5>Email address</h5>
-            <input type="text">
-            <h5>Confirm Email address</h5>
-            <input type="text">
-            <h5>Password</h5>
-            <input type="password">
-            <p>Include a minimum of 6 characters, and contain at least 1 number</p>
-            <h5>Confirm Password</h5>
-            <input type="password">
-            <h5>Cell Phone Number <span>(Optional)</span></h5>
-            <input type="Number">
-            <p>We will use this number to send occasional promotional messages.</p>
-            <button>CONTINUE</button>
-            <p class="last">By proceeding, you are confirming that you agree to our Terms and Conditions and Privacy Policy</p>
-            </div>
-            </div>
-</body>
+            <form>
+               <h2>Or create an email account</h2>
+               <h5>Email address</h5>
+               <input id="email" type="text" required/>
+               <h5>Password</h5>
+               <input id="pass" type="password" required/>
+               <h5>Enter Username</h5>
+               <input id="user" type="text" placeholder="Enter username"/>
+               <input id="sub" type="submit" />
+               <p class="last">By proceeding, you are confirming that you agree to our Terms and Conditions and Privacy Policy</p>
+           </form>
+ </body>
 </html>
+<script>
+   document.querySelector("form").addEventListener("submit", signUpFun);
+   let userData = JSON.parse(localStorage.getItem("userCreds"))||[]
+   
+   function signUpFun(){
+       event.preventDefault();
+       let userObj = {
+           email: document.querySelector("#email").value,
+           password:document.querySelector("#pass").value,
+           userName:document.querySelector("#user").value,
+        }
+       console.log(userObj)
+
+       userData.push(userObj);
+       console.log(userData);
+
+       localStorage.setItem("userCreds", JSON.stringify(userData))
+   }
+</script>

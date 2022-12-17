@@ -49,39 +49,46 @@
             margin-top: 140px;
             padding: 25px 30px;
          }
-         .container>div>h2{
+         .container>div>form>h2{
             font-size: 28px;
          }
-         .container>div>h5{
+         .container>div>form>h5{
             font-size: 17px;
             margin-top: 30px;
             margin-bottom: 5px;
          }
-         .container>div>input{
+         .container>div>form>input{
             height: 50px;
             width: 100%;
          }
-         .container>div>h6{
+
+         #sub{
+            height: 50px;
+            width: 100%;
+            font-size: 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+         }
+
+         #sub:hover{
+            cursor: pointer;
+            background-color: #28bdb7;
+            color: black;
+            border: 0px;
+            text-decoration: underline;
+         }
+
+         .container>div>form>h6{
             font-weight: 400;
             text-decoration: underline;
             margin-top: 60px;
             font-size: 16px;
             color: gray;
          }
-         .container>div>button{
-            width: 100%;
-            height: 48px;
-            margin-top: 27px;
-            background-color: black;
-            color: white;
-         }
-         .container>div>button:hover{
-            cursor: pointer;
-            background-color: #28bdb7;
-            color: black;
-            border: 0px;
-         }
-         .container>div>p{
+         
+         .container>div>form>p{
             margin-top: 40px;
             font-size: 18px;
             font-weight: 100;
@@ -122,17 +129,20 @@
         </div>
      </div>
    </nav>
-
+     
     <div class="container">
-        <div>
-            <h2>Existing Customers</h2>
-            <h5>Email address</h5>
-            <input type="text">
-            <h5>Password</h5>
-            <input type="password">
-            <h6>FORGOTTEN YOUR PASSWORD?</h6>
-            <button onclick="login()">SIGN IN</button>
-            <p>Or, Continue with</p>
+             <div>
+                <form>
+                    <h2>Existing Customers</h2>
+                     <h5>Email address</h5>
+                    <input id="email" type="text" required />
+                    <h5>Password</h5>
+                    <input id="pass" type="password" required />
+                    <h6>FORGOTTEN YOUR PASSWORD?</h6>
+                    <input id="sub" type="submit" />
+                    <p>Or, Continue with</p>
+                </form>
+                
 
             <div class="box">
                 <div>
@@ -154,7 +164,25 @@
 </html>
 
 <script>
-    function login(){
-        alert("Login Successfully");
+      document.querySelector("form").addEventListener("submit", loginFun);
+    let regdUsers=JSON.parse(localStorage.getItem("userCreds"));
+    // console.log(regdUsers)
+    function loginFun() {
+        event.preventDefault();
+        let enteredEmail = document.querySelector("#email").value;
+        let enteredPass = document.querySelector("#pass").value;
+
+        let auth=regdUsers.find((el)=>el.email==enteredEmail);
+    
+         if(auth.email == enteredEmail && auth.password == enteredPass){
+                alert("login success");
+                window.location.href = "index.html"
+               
+            }else{
+                alert("login failed")
+                alert("check your email and password")
+                
+            }
+        
     }
 </script>

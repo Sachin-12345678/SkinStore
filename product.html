@@ -141,12 +141,33 @@
         margin-top: 5px;
         cursor: pointer;
     }
+
+    #priceSort{
+        width: 20%;
+        padding: 7px 22px;
+        margin-top: 25px;
+    }
+
+    #container {
+        margin-top: 30px;
+        /* border: 2px solid; */
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        column-gap: 7%;
+        row-gap: 10px;
+      }
+      /* #container .child > div {
+        /* border: 1px solid red; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* width: 60%; */
+      /* } */ 
+
     </style>
 </head>
 <body>
     <!-- header start here -->
-
-    <nav>
+  <nav>
     <div id="navbar">
         <div>
             <h1>SkinStore</h1>
@@ -192,7 +213,97 @@
         <p>72 results</p>
         <p>The SkinCeuticals story began with Dr. Sheldon Pinnell’s groundbreaking research on vitamin C in 1992, long before the company was established in 1997. In the years since, SkinCeuticals has remained committed to using evidence-based research to develop new antioxidant and cosmeceutical formulations, and has grown to become the #1 Medical Skincare Brand in the U.S."[1]...............................</p>
         <span>Read more</span>
+
+        <div id="sorter">
+            <select id="priceSort">
+              <option value="">Default</option>
+              <option value="h2l">Price: High to Low</option>
+              <option value="l2h">Price: Low to High</option>
+            </select>
+            </div>
     </div>
 </div>
+
 </body>
 </html>
+<script>
+    let arr = [
+      {
+        id: 1,
+        brand: "SkinCeuticals Anti-Aging Radiance Duo (Worth $305.00)",
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13547804-3064932747510939.jpg",
+        price: "MSRP: $305.00",
+        cutoffPrice: "$259.25",
+        button: "QUICK BUY"
+      },
+      {
+        id: 2,
+        brand: "Puma",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg53aUQ-XwmEPNIl-EwOPvGSt9wRMrQb06HA&usqp=CAU",
+        price: "1500",
+        cutoffPrice: "2500",
+      },
+      {
+        id: 3,
+        brand: "Nike",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz-OSIAXTOQCgKVqfyVbXl0NLm88-TT8HsLg&usqp=CAU",
+        price: "1900",
+        cutoffPrice: "3000",
+      },
+      {
+        id: 4,
+        brand: "Levis",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThZvU3g1jrct8xmaGT8m1mSb_Xs9qS2Fn0AA&usqp=CAU",
+        price: "2500",
+        cutoffPrice: "4000",
+      },
+      {
+        id: 5,
+        brand: "Bata",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGx4EfKPgJNzE-Hhk9ZDzzM_tYd1mUhGb22g&usqp=CAU",
+        price: "1899",
+        cutoffPrice: "2500",
+      },
+    ];
+  
+    function appendData(data) {
+      document.getElementById("container").innerHTML = null;
+      data.forEach((el, index) => {
+        let box = document.createElement("div");
+        box.setAttribute("class", "child");
+        let img = document.createElement("img");
+        img.setAttribute("src", el.img);
+        let brand = document.createElement("h3");
+        brand.innerText = el.brand;
+        let button=document.createElement("h4")
+        button.innerText=el.button;
+        // price div here
+        let priceDiv = document.createElement("div");
+        let price = document.createElement("p");
+        price.innerText = "$" + el.price;
+        let cutoffPrice = document.createElement("p");
+        cutoffPrice.innerText = "$" + el.cutoffPrice;
+        // append to price div
+        priceDiv.append(price, cutoffPrice);
+        // append to box
+        box.append(img, brand, priceDiv);
+        // append to parent
+        document.getElementById("container").append(box);
+      });
+    }
+  
+    appendData(arr);
+  
+    // sorting here
+    document.getElementById("priceSort").addEventListener("change", (e) => {
+      let sortBy = e.target.value;
+      if (sortBy === "h2l") {
+        // sort in desc
+        let newData = arr.sort((a, b) => +b.price - +a.price);
+        appendData(newData);
+      } else if (sortBy === "l2h") {
+        let newData = arr.sort((a, b) => +a.price - +b.price);
+        appendData(newData);
+      }
+    });
+    </script>
