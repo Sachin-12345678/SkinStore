@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       
+        #navbar{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 90px;
+            
+        }
+        #navbar>div{
+            width: 15%;
+            margin-left: 150px;
+        }
+        #navbar>div>h1{
+            font-size: 55px;
+        }
+        
+  #addressPageDetails{
+       width:80%;
+       margin: auto;
+       margin-top: 30px;
+       /* border: 1px solid black; */
+       height: 500px;
+       display: flex;
+   }
+   #addrressPage{
+       float: left;
+       width:64%;
+       height: 100%;
+       /* border: 1px solid red; */
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    padding: 10px;
+    box-sizing: border-box;    }
+   #newAD{
+       width:100%;
+       height: 45px;
+       /* border: 1px solid black; */
+       background-color:#c1c1c13f ;
+       font-family: 'Times New Roman', Times, serif;
+   }
+   #addressput{
+    width:92%;
+       /* border: 1px solid black; */
+       font-family: 'Times New Roman', Times, serif;
+       padding: 25px;
+   }
+   #Mrop{
+       margin-right: 40px;
+   }
+   #ADname{
+       width:300px;
+       border: none;
+   }
+   .inp{
+    border: none;
+    width:400px;
+    height: 30px;
+   }
+   #saveContinue{
+       width:250px;
+       padding: 12px;
+       font-size: 20px;
+       font-weight: bold;
+       background-color:black ;
+       color: white;
+       border: none;
+       margin-left: 20%;
+   }
+   #Logindetails{
+       width:33%;
+       margin-left: 2%;
+       /* border: 1px solid black; */
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;     
+       padding: 15px;
+       box-sizing: border-box;
+    }
+   #loginbold{
+       font-weight: bold;
+       font-size: 18px;
+       font-family: 'Times New Roman', Times, serif;
+   }
+   #chekdeliver{
+       margin-left: 80px;
+       color: black;
+       font-family: 'Times New Roman', Times, serif;
+
+   }
+   .TP{
+       float: left;
+   }
+   .PR{
+       float: right;
+   }
+   #TP{
+       font-weight: bold;
+       font-size: 24px;
+       font-family: 'Times New Roman', Times, serif; 
+   }
+   #TPR{
+       font-weight: bold;
+       font-size: 24px;
+       font-family: 'Times New Roman', Times, serif;  
+   }
+   #freeshiping{
+       width:100%;
+       height: 40px;
+       /* border: 1px solid black; */
+       background-color:#c1c1c13f ;
+       margin-bottom: 20px;
+       font-family: 'Times New Roman', Times, serif;
+       background-color: #404548;
+        color: white;
+
+   }
+   #freeshiping>p{
+       margin-left: 15px;
+       font-family: 'Times New Roman', Times, serif;
+   }
+   #monthend{
+       display: flex;
+       
+   }
+   #monthd{
+       width:100px;
+       height: 22px;
+       margin-right: 20px;
+   }
+   #imgabcc{
+       margin-left: 80px;
+   }
+   #imgabc{
+       height:30px;
+   }
+   #imgabc>img{
+       height: 100%;
+   }
+   #L1{
+       width:100%;
+       height: 20px;
+   }
+   #ADshow{
+       height: 75px;
+   }
+   
+  #city{
+      margin-right: 25px;
+  }
+#adnam{
+    color: black;
+}
+#changeaddr{
+    margin-left: 110px;
+
+}
+#GoToAddrPage{
+    background-color: black;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+}
+#GoToAddrPage:hover{
+    background-color: black;
+    color: white;
+}
+ </style>
+</head>
+<body>
+    <!-- header start -->
+    <nav>
+        <div id="navbar">
+            <div>
+             <h1>SkinStore</h1>
+             <p>Part of the lookfantastic group</p>
+            </div>
+         </div>
+       </nav>
+    <!-- header end -->
+    
+   <div></div>
+    <div id="addressPageDetails">
+        <div id="addrressPage">
+            <div id="freeshiping">
+                <p>free shipping applied on your First Order. Welcome to Purplle!</p>
+            </div>
+            <div id="newAD">
+                <h3>Credit/Debit Card</h3>
+            </div>
+            <div id="addressput">
+               
+                <!-- <span> -->
+                    <input type="name" placeholder="Name on card" id="ADname" required />
+                    <hr><br><br>
+                    <input type="number" placeholder="CardNumber" id="CardNumber" class="inp" required />
+                    <hr><br><br>
+                    <div id="monthend" class="inp">
+                      <div id="month">
+                          <input type="number" placeholder="Expiry MM" id="monthd">
+                      </div>
+                      <div>
+                          <input type="number" placeholder="Expiry YY" id="monthd">
+                   
+                       </div>
+                       <div id="imgabcc">
+                          <input type="number" placeholder="CVV" id="monthd">
+                      </div>
+                      <div id="imgabc">
+                          <img 
+                          src=
+                          "https://media6.ppl-media.com/mediafiles/ecomm/misc/1516175146_cvv.jpg" 
+                          alt="">
+                      </div>              
+                    </div><br><br>
+    
+                    <div id="savethis">
+                   
+                      <input type="checkbox" id="checkbox">
+                  
+                            <span>Save This Card for Future</span>
+                     </div>
+                     <br><br>
+    
+                  
+                    <button onclick="gotohome()" id="saveContinue">PAYMENT</button><br><br>
+    
+    
+                <!-- </span> -->
+            </div>
+        </div>
+        <div id="Logindetails">
+              <div id="totalPrice">
+                  <h3>Price Details</h3>
+                  <span class="TP">Total MRP</span><span class="PR" id="TotalPR">Rs0</span><br><br>
+                  <span class="TP">Saving On MRP</span><span class="PR">Rs0</span><br><br>
+                  <hr><br>
+                  <span class="TP" id="TP">Order total</span><span class="PR" id="TPR" >Rs0</span><br><br>
+             </div>
+       </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var TotalPrice=localStorage.getItem("num")
+
+    let TotalPR=document.getElementById("TotalPR");
+    TotalPR.innerHTML=`Rs ${TotalPrice}`;
+
+    let TPR=document.getElementById("TPR");
+    TPR.innerHTML=`Rs ${TotalPrice}`;
+
+    function gotohome(){
+        alert(`Payment of Rs ${TotalPrice} succesfully done `);
+
+        window.location.href="index.html"
+    }
+</script>

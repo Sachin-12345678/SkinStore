@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            width: 100%;
+            position: fixed;
+            background-color: white;
+        }
+        #navbar{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 90px;
+            
+        }
+        #navbar>div{
+            width: 15%;
+            margin-left: 40px;
+        }
+        #navbar>div>h1{
+            font-size: 55px;
+        }
+
+          /* footer start here */
+          #foot{
+           display: flex;
+           height: 150px;
+           width: 95%;
+           margin: auto;
+          margin-top: 50px;
+       }
+    
+       #foot>div{
+        margin-top: 23px;
+       }
+
+       #foot>div>button{
+        margin-top: 15px;
+        padding: 15px 15px;
+        background-color: black;
+        color: white;
+       }
+       #foot>div>button:hover{
+        background-color: rgb(12, 201, 201);
+        cursor: pointer;
+        color: black;
+        border: none;
+       }
+
+       #foot>div:nth-child(2){
+        margin-left: 22%;
+       }
+
+       .ok{
+        width: 300px;
+        height: 45px;
+        margin-top: 10px;
+        display: flex;
+        gap: 12px;
+       }
+
+       .ok>div{
+        width: 60px;
+       }
+
+       .ok>div>img{
+        width: 100%;
+        cursor: pointer;
+       }
+
+       #main{
+        /* border: 1px solid red; */
+        height: 400px;
+        display: flex;
+        width: 95%;
+        margin: auto;
+        gap: 20px;
+        margin-top: 18px; 
+       }
+       #main>div{
+        /* border: 1px solid green; */
+        width: 20%;
+       
+       }
+       #main>div>p{
+        color: grey;
+        cursor: pointer;
+       }
+       #main>div:nth-child(2){
+        margin-left: 188px;
+       }
+
+       .res{
+        display: flex;
+        /* border: 1px solid red; */
+        height: 35px;
+        margin-top: 15px;
+        gap: 10px;
+       }
+       .res>div{
+        /* border: 1px solid green; */
+        width: 50px;
+       }
+       .res>div>p{
+        color: grey;
+        cursor: pointer;
+       }
+       .res>div:nth-child(2){
+        width: 200px;
+        margin-top: 7px;
+       }
+       .res>div>img{
+        width: 100%;
+        height: 25px;
+       }
+       .second>p{
+        margin-top: 17px;
+       }
+
+       #last{
+        width: 95%;
+        margin: auto;
+        /* border: 1px solid red; */
+        height: 200px;
+        display: flex;
+        margin-top: 33px;
+       }
+       #last>div>h1{
+        font-weight: bolder;
+        font-size: 35px;
+       }
+       #last>div>p{
+        color: grey;
+       }
+       #last>div:nth-child(2){
+        margin-left: 40%;
+       }
+       #last>div:nth-child(2)>p{
+        color: black;
+       }
+       .right1{
+        height: 47px;
+        margin-top: 10px;
+        width: 450px;
+        display: flex;
+       }
+       .right1>div{
+        width: 80px;
+       }
+    /* footer end */
+        
+#addressPageDetails{
+       width:80%;
+       margin: auto;
+       margin-top: 30px;
+       /* border: 1px solid black; */
+       height: 700px;
+       display: flex;
+       padding: 20px;
+       box-sizing: border-box;
+       display: flex;
+   }
+   #addrressPage{
+       margin: auto;
+       margin-top: 70px;
+       width:60%;
+       height: 88%;
+       /* border: 1px solid red; */
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+   #newAD{
+       width:100%;
+       height: 50px;
+       font-size: 22px;
+       /* border: 1px solid black; */
+       background-color:#c1c1c13f ;
+       font-family: 'Times New Roman', Times, serif;
+   }
+   #addressput{
+    width:91%;
+       height: 83%;
+       /* border: 1px solid black; */
+       font-family: 'Times New Roman', Times, serif;
+       padding: 25px;
+   }
+   #Mrop{
+       margin-right: 40px;
+   }
+   #ADname{
+       width:300px;
+       border: none;
+   }
+   .inp{
+    border: none;
+    width:400px;
+    height: 30px;
+   }
+   #saveContinue{
+       width:250px;
+       padding: 12px;
+       font-size: 20px;
+       font-weight: bold;
+       background-color:black;
+       color: white;
+       border: none;
+       margin-left: 20%;
+   }
+   #Logindetails{
+       width:36%;
+       margin-left: 2%;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       /* border: 1px solid black; */
+   }
+   #loginbold{
+       font-weight: bold;
+       font-size: 18px;
+       font-family: 'Times New Roman', Times, serif;
+   }
+   #chekdeliver{
+       margin-left: 80px;
+       color: black;
+       font-family: 'Times New Roman', Times, serif;
+
+   }
+   .TP{
+       float: left;
+   }
+   .PR{
+       float: right;
+   }
+   #TP{
+    font-weight: bold;
+       font-size: 24px;
+       font-family: 'Times New Roman', Times, serif; 
+   }
+   #TPR{
+    font-weight: bold;
+       font-size: 24px;
+       font-family: 'Times New Roman', Times, serif;  
+   }
+
+   /* footer start here */
+        #foot{
+           display: flex;
+           height: 150px;
+           width: 95%;
+           margin: auto;
+          margin-top: 50px;
+       }
+    
+       #foot>div{
+        margin-top: 23px;
+       }
+
+       #foot>div>button{
+        margin-top: 15px;
+        padding: 15px 15px;
+        background-color: black;
+        color: white;
+       }
+       #foot>div>button:hover{
+        background-color: rgb(12, 201, 201);
+        cursor: pointer;
+        color: black;
+        border: none;
+       }
+
+       #foot>div:nth-child(2){
+        margin-left: 22%;
+       }
+
+       .ok{
+        width: 300px;
+        height: 45px;
+        margin-top: 10px;
+        display: flex;
+        gap: 12px;
+       }
+
+       .ok>div{
+        width: 60px;
+       }
+
+       .ok>div>img{
+        width: 100%;
+        cursor: pointer;
+       }
+
+       #main{
+        /* border: 1px solid red; */
+        height: 400px;
+        display: flex;
+        width: 95%;
+        margin: auto;
+        gap: 20px;
+        margin-top: 18px; 
+       }
+       #main>div{
+        /* border: 1px solid green; */
+        width: 20%;
+       
+       }
+       #main>div>p{
+        color: grey;
+        cursor: pointer;
+       }
+       #main>div:nth-child(2){
+        margin-left: 188px;
+       }
+
+       .res{
+        display: flex;
+        /* border: 1px solid red; */
+        height: 35px;
+        margin-top: 15px;
+        gap: 10px;
+       }
+       .res>div{
+        /* border: 1px solid green; */
+        width: 50px;
+       }
+       .res>div>p{
+        color: grey;
+        cursor: pointer;
+       }
+       .res>div:nth-child(2){
+        width: 200px;
+        margin-top: 7px;
+       }
+       .res>div>img{
+        width: 100%;
+        height: 25px;
+       }
+       .second>p{
+        margin-top: 17px;
+       }
+
+       #last{
+        width: 95%;
+        margin: auto;
+        /* border: 1px solid red; */
+        height: 200px;
+        display: flex;
+        margin-top: 33px;
+       }
+       #last>div>h1{
+        font-weight: bolder;
+        font-size: 35px;
+       }
+       #last>div>p{
+        color: grey;
+       }
+       #last>div:nth-child(2){
+        margin-left: 40%;
+       }
+       #last>div:nth-child(2)>p{
+        color: black;
+       }
+       .right1{
+        height: 47px;
+        margin-top: 10px;
+        width: 450px;
+        display: flex;
+       }
+       .right1>div{
+        width: 80px;
+       }
+    /* footer end */
+
+    #checkoutpagediv{
+        display: flex;
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div>
+             <h1>SkinStore</h1>
+             <p>Part of the lookfantastic group</p>
+            </div>
+         </div>
+       </nav>
+    
+    <div id="checkoutpagediv">
+        
+    <div id="addressPageDetails">
+        <div id="addrressPage">
+            <div id="newAD">
+                <h3>Add New Address</h3>
+            </div>
+            <div id="addressput">
+                <span id="Mrop">
+                    <select>
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                        <option>Mr</option>
+                        <option>Miss</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="name" placeholder="Name" id="ADname" required />
+                    <hr><br><br>
+                    <input type="number" placeholder="Pincode" id="Pincode" class="inp" required />
+                    <hr><br><br>
+                    <input type="text" placeholder="Address" id="address" class="inp"  required/>
+                    <hr><br><br>
+                    <input type="text" placeholder="Landmark" id="Landmark" class="inp" required />
+                    <hr><br><br>
+                    <input type="text" placeholder="City" id="City" class="inp"  required/>
+                    <hr><br><br>
+                    <input type="number" placeholder="Mobile" id="mobile" class="inp" required />
+                    <hr><br><br>
+                    <button onclick="gotopayment()" id="saveContinue">SAVE & CONTINUE</button>
+    
+                </span>
+            </div>
+        </div>
+ </div>   
+ </div>
+
+ <!-- footer start here -->
+<hr>
+
+<div id="foot">
+  <div>
+    <h4>Sign up to our email list and receive 20% off your next order</h4>
+    <button>SIGN UP</button>
+  </div>
+  <div>
+   <h4>Connect with us</h4>
+   <div class="ok">
+       <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWAK5INR7gmZZWs5JYpQEYk9rU85dy-8sdg&usqp=CAU" alt="">
+       </div>
+       <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOQfJ72TRy81Xoh_S8GR5IcyJ08gejVoVEUw&usqp=CAU" alt="">
+       </div>
+       <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMUZpSqWDzo2aBAFN3lDM1FCsQyY302dBkcg&usqp=CAU" alt="">
+       </div>
+       <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3vypqt3LkUW2Ba2iIb4_lU3TBQtgMqQh2zA&usqp=CAU" alt="">
+       </div>
+       <div>
+        <img src="data:image/jpeg;base64,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" alt="">
+       </div>
+   </div>
+  </div>
+</div>
+
+<hr>
+
+<div id="main">
+  <div>
+    <h4>Help & Information</h4>
+    <div class="res">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW2WB-vQJQj_4m_PgwwrgF1DdfahpnxmXTnd2bEhwEvT2RI-76Gc_tJK966Npw-Wb5s28&usqp=CAU" alt="">
+        </div>
+        <div>
+            <p>Customer Survice</p>
+        </div>
+    </div>
+    <div class="res">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRt_pQSq9fCWVClgN8sh95akVTJ6bmIV6rUg&usqp=CAU" alt="">
+        </div>
+        <div>
+            <p>Delivery Information</p>
+        </div>
+    </div>
+    <div class="res">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnr3m7lleBP9gPwd1Ior06x4l2Xrbyh-j5-g&usqp=CAU" alt="">
+        </div>
+        <div>
+            <p>Return & Refunds</p>
+        </div>
+    </div>
+    <div class="res">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs3suvvsyMablvlRhQ2ENul8V9z32AKmVYag&usqp=CAU" alt="">
+        </div>
+        <div>
+            <p>Help Center</p>
+        </div>
+    </div>
+    <div class="res">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAdDcE4k2iKNmHIrhIhpML0JKhjH6lw02yBw&usqp=CAU" alt="">
+        </div>
+        <div>
+            <p>Track my order</p>
+        </div>
+    </div>
+    <div class="res">
+        <div>
+            <p>Accessibility</p>
+        </div>
+    </div>
+    <div class="res">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwfCQuwJOAfOeIAjtNHH5MqBBhIr0WDGBJA&usqp=CAU" alt="">
+        </div>
+        <div>
+            <p>Cookie Settings</p>
+        </div>
+    </div>
+    
+    
+  </div>
+  
+
+  <div class="second">
+    <h4>About SkinStore</h4>
+    <p>Key Workers Discount</p>
+    <p>About Us</p>
+    <p>Affiliate Program</p>
+    <p>Brand Direction</p>
+    <p>Coupon Codes</p>
+    <p>Refer A Friend</p>
+    <p>Student Discount</p>
+    <p>Join SkinStore Experts</p>
+  </div>
+  <div class="second">
+    <h4>Legal</h4>
+    <p>Cookie Information</p>
+    <p>Privacy policy</p>
+    <p>Terms&Conditions</p>
+    <p>Modern Slavery Statement</p>
+  </div>
+  <div class="second">
+    <h4>How To Contact Us</h4>
+    <p>Message Us</p>
+    <p>Free Beauty Consulation</p>
+  </div>
+</div>
+
+<hr>
+
+<div id="last">
+    <div>
+        <h1>T H G</h1>
+        <p>2022 The Hut.com Ltd.</p>
+    </div>
+    <div>
+        <p>Pay Securely With</p>
+        <div class="right1">
+           <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUYFNfkJcml-cTd8J-g00qKG4dl__kXc1IGqQkE9H5u-sJyWwy6v0WhmGAgVGLA4fX0g&usqp=CAU" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- footer end -->
+
+ </body>
+</html>
+<script>
+    function gotopayment(){
+    
+    window.location.href="payment.html"
+    
+   }
+</script>

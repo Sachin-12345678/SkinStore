@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            width: 100%;
+            position: fixed;
+            background-color: white;
+        }
+        #navbar{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 90px;
+            
+        }
+        #navbar>div{
+            width: 15%;
+            margin-left: 40px;
+        }
+        #navbar>div>h1{
+            font-size: 55px;
+        }
+        
+        .container{
+            height: 800px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 30px;
+        }
+        .container>div{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            margin: auto;
+            width: 55%;
+            height: 750px;
+            margin-top: 140px;
+            padding: 25px 30px;
+         }
+         .container>div>form>h2{
+            margin-top: 20px;
+         }
+         .h{
+            margin-top: 50px;
+            font-size: 25px;
+         }
+         .first{
+            font-size: 32px;
+         }
+         .box{
+            height: 45px;
+            margin-top: 30px;
+            display: flex;
+         }
+         .box>div{
+            border: 1px solid black;
+            width: 100%;
+         }
+         .box>div>a{
+            font-size: 25px;
+            text-decoration: none;
+            color: black;
+            padding: 50px 0px;
+            margin-left: 50px;
+         }
+         .second>a{
+            width: 100%;
+            height: 30px;
+            padding: 10px 5px;
+            display: block;
+            background-color: black;
+            margin-top: 20px;
+         }
+         .container>div>form>h5{
+            font-size: 17px;
+            margin-top: 30px;
+         }
+         .container>div>form>input{
+            width: 100%;
+            height: 50px;
+         }
+
+         #sub{
+            height: 50px;
+            width: 100%;
+            font-size: 20px;
+            margin-top: 35px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+         }
+
+         #sub:hover{
+            cursor: pointer;
+            background-color: #28bdb7;
+            color: black;
+            border: 0px;
+            text-decoration: underline;
+         }
+
+         .container>div>p{
+            margin-top: 10px;
+         }
+         .container>div>form>.last{
+            margin-top: 40px;
+         }
+         .container>div>form>.first{
+            font-size: 30px;
+         }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div>
+             <h1>SkinStore</h1>
+             <p>Part of the lookfantastic group</p>
+            </div>
+         </div>
+       </nav>
+
+    <div class="container">
+        <div>
+            <h2 class="first">About You</h2>
+            <h2 class="h">Sign Up With</h2>
+
+            <div class="box">
+                <div>
+                    <a href="https://loginservice.thehut.net/facebook?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.skinstore.com/socialAuthentication.account">Facebook</a>
+                </div>
+                <div>
+                    <a href="https://loginservice.thehut.net/google?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.skinstore.com/socialAuthentication.account">Google</a>
+                </div>
+            </div>
+
+            <form>
+               <h2>Or create an email account</h2>
+               <h5>Email address</h5>
+               <input id="email" type="text" required/>
+               <h5>Password</h5>
+               <input id="pass" type="password" required/>
+               <h5>Enter Username</h5>
+               <input id="user" type="text" placeholder="Enter username"/>
+               <input id="sub" type="submit" />
+               <p class="last">By proceeding, you are confirming that you agree to our Terms and Conditions and Privacy Policy</p>
+           </form>
+ </body>
+</html>
+<script>
+   document.querySelector("form").addEventListener("submit", signUpFun);
+   let userData = JSON.parse(localStorage.getItem("userCreds"))||[]
+   
+   function signUpFun(){
+       event.preventDefault();
+       let userObj = {
+           email: document.querySelector("#email").value,
+           password:document.querySelector("#pass").value,
+           userName:document.querySelector("#user").value,
+        }
+        alert("Login Successfully");
+       console.log(userObj)
+
+       userData.push(userObj);
+       console.log(userData);
+
+       localStorage.setItem("userCreds", JSON.stringify(userData))
+   }
+</script>
